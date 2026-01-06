@@ -13,14 +13,14 @@ function SignInScreen({ isMac }) {
 	};
 
 	return (
-		<div className={`screenHeight SignInOverlay ${isMac ? 'macos-signin' : 'windows-signin'}`}>
+		<div className={`screenHeight SignInOverlay ${isMac ? 'macos-signin' : 'windows-signin'} uk-flex uk-flex-center uk-flex-middle`}>
 			{/* Sign In Form */}
-			<div className="uk-position-center uk-overlay uk-text-center">
-				<div>
+			<div className="uk-overlay uk-text-center mobile-scroll-container">
+				<div className="uk-margin-auto">
 					<img
 						className="uk-border-circle mobile-avatar"
 						src={avatar}
-						style={{ width: isMac ? 'clamp(80px, 20vw, 120px)' : 'clamp(120px, 40vw, 200px)' }}
+						style={{ width: isMac ? 'clamp(80px, 20vw, 120px)' : 'clamp(100px, 30vw, 180px)' }}
 						alt="User"
 					/>
 				</div>
@@ -29,7 +29,7 @@ function SignInScreen({ isMac }) {
 						Samson Juma
 					</h1>
 				</div>
-				<div className={isMac ? 'macos-input-container' : ''}>
+				<div className={isMac ? 'macos-input-container' : 'uk-margin-auto'}>
 					<TextField
 						placeholder={isMac ? "Enter Password" : "Enter Any Pin"}
 						type="password"

@@ -5,9 +5,9 @@ import "./lockScreen.scss";
 
 function LockWallpaperScreen({ isMac }) {
 	return (
-		<div className={`screenHeight ${isMac ? 'macos-lock' : 'windows-lock'}`}>
+		<div className={`screenHeight ${isMac ? 'macos-lock' : 'windows-lock'} uk-flex uk-flex-center uk-flex-middle`}>
 			{/* LockScreen Message */}
-			<div className={`${isMac ? 'uk-position-center' : 'uk-position-top-center'} uk-overlay uk-flex uk-flex-column`}>
+			<div className="uk-overlay uk-flex uk-flex-column mobile-scroll-container">
 				{isMac && (
 					<div className="macos-lock-content uk-text-center">
 						<div className="macos-lock-clock uk-margin-bottom">
