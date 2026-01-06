@@ -1,0 +1,17 @@
+.macos-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background: url('../assets/images/wallpapers/wallpaper4.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #222;
+    overflow: hidden;
+
+    .desktop-container {
+        flex: 1;
+        position: relative;
+        padding-top: 30px; // space for menubar
+        padding-bottom: 80px; // space for dock
+    }
+}

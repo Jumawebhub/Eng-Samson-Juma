@@ -1,0 +1,75 @@
+.macos-menubar {
+    height: 30px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+
+    .left-section,
+    .right-section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu-item {
+        cursor: pointer;
+        padding: 2px 5px;
+        border-radius: 4px;
+        transition: background 0.2s;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        &.apple-icon {
+            font-size: 18px;
+            position: relative;
+
+            .apple-dropdown {
+                position: absolute;
+                top: 28px;
+                left: -10px;
+                width: 220px;
+                background: rgba(45, 45, 45, 0.7);
+                backdrop-filter: blur(50px);
+                -webkit-backdrop-filter: blur(50px);
+                border-radius: 6px;
+                padding: 5px 0;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                color: white;
+                font-size: 13px;
+                font-weight: 400;
+
+                .dropdown-item {
+                    padding: 4px 15px;
+
+                    &:hover {
+                        background: #0078d7;
+                        color: white !important;
+                    }
+                }
+
+                .divider {
+                    height: 1px;
+                    background: rgba(255, 255, 255, 0.1);
+                    margin: 5px 0;
+                }
+            }
+        }
+
+        &.app-name {
+            font-weight: 700;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+@import "../../theme/variables";
+
+.SignInOverlay {
+	background: rgba(0, 0, 0, 0.25);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+}
+
+/* macOS Lock Screen */
+.macos-lock {
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(25px);
+	-webkit-backdrop-filter: blur(25px);
+
+	.macos-lock-clock {
+		h1 {
+			font-size: 8rem;
+			font-weight: 200;
+			letter-spacing: -2px;
+			margin-bottom: 0;
+		}
+
+		h3 {
+			font-size: 1.5rem;
+			font-weight: 400;
+		}
+	}
+}
+
+/* macOS Sign In Screen */
+.macos-signin {
+	background: rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(40px);
+	-webkit-backdrop-filter: blur(40px);
+
+	.macos-input-container {
+		width: 250px;
+		margin: 20px auto;
+
+		.ms-TextField-fieldGroup {
+			background: rgba(255, 255, 255, 0.2) !important;
+			border: 1px solid rgba(255, 255, 255, 0.3) !important;
+			border-radius: 6px !important;
+
+			input {
+				color: white !important;
+				text-align: center;
+
+				&::placeholder {
+					color: rgba(255, 255, 255, 0.6) !important;
+				}
+			}
+		}
+	}
+
+	.macos-signin-footer {
+		gap: 60px;
+
+		.footer-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+			cursor: pointer;
+			color: white;
+			transition: opacity 0.2s;
+
+			&:hover {
+				opacity: 0.7;
+			}
+
+			.footer-icon-circle {
+				width: 40px;
+				height: 40px;
+				border: 1.5px solid white;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 18px;
+			}
+
+			span {
+				font-size: 12px;
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+/* macOS Shutdown Screen */
+.macos-shutdown {
+	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.power-button {
+		color: white !important;
+
+		&:hover {
+			background: rgba(255, 255, 255, 0.1) !important;
+		}
+	}
+}
