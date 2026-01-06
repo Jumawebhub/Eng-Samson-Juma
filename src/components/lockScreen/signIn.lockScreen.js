@@ -18,10 +18,9 @@ function SignInScreen({ isMac }) {
 			<div className="uk-position-center uk-overlay uk-text-center">
 				<div>
 					<img
-						className="uk-border-circle"
+						className="uk-border-circle mobile-avatar"
 						src={avatar}
-						width={isMac ? "120" : "200"}
-						height={isMac ? "120" : "200"}
+						style={{ width: isMac ? 'clamp(80px, 20vw, 120px)' : 'clamp(120px, 40vw, 200px)' }}
 						alt="User"
 					/>
 				</div>
